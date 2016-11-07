@@ -29,4 +29,6 @@
 
 ## 4.上传修改 
 >编辑修改后用svn或者git进行提交
->注：提交过程中可能需要输入github的帐号和密码 
+>注：提交过程中可能需要输入github的帐号和密码  
+
+*详情见<a href="https://github.com/zooms/zooms.github.com/blob/master/md/github_page介绍.md"> github个人网站</a>*
