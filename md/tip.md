@@ -24,3 +24,4 @@ black黑色、silver银色、gray灰色、white白色、maroon栗色、purple紫
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
 
+*<a href="https://github.com/zooms/zooms.github.com/blob/master/md/tip.md">更多小技巧</a>*
