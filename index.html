@@ -3,10 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>hello world</title>
+    <meta name="keywords" content="your keywords">
+    <meta name="description" content="your description">
+    <meta name="author" content="author,email address">
+
+    <link rel="stylesheet" href="assets/lib/bootstrap.css">
+    <link rel="stylesheet" href="assets/lib/Font-Awesome-3.2.1/css/font-awesome.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/lib/Font-Awesome-3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <h1>Hello World !</h1>
-	<h1>Hello World !</h1>
+
+      <header class="header jumbotron">
+      <div class="container">
+          <h1>WEB前端</h1>
+          <p>稳定、快速、免费的开源项目 CDN 服务 <br>
+             <span class="package-amount">文章数量：234</span>
+          </p>
+          <form class="" role="search">
+              <div id="search-form" class="form-group">
+                  <input type="text" class="form-control search clearable" placeholder="搜索开源库，例如：jquery">
+                  <!--<i class="fa fa-search"></i>-->
+                  <i class=" icon-search"></i>
+              </div>
+          </form>
+          </div>
+      </header>
+      <div class="col-xs-12 ">
+          <div class="container">
+              <form class="form-inline ">
+                  <label>选择文章分类：</label><div class="btn-group" data-toggle="buttons"><label class="btn btn-default">
+                  <input type="radio" name="options" id="relative" checked="">html/css</label><label class="btn btn-default active">
+                  <input type="radio" name="options" id="http">Jquery</label><label class="btn btn-default">
+                  <input type="radio" name="options" id="https"> Javascript </label></div>
+              </form>
+          </div>
+      </div>
+      <div class="col-xs-12">
+         <div id="article" class="container ">
+             <a href="/bootstrap/" class="package list-group-item">
+                 <div class="row">
+                     <div class="col-md-3">
+                         <h4 class="package-name">bootstrap</h4>
+                     </div>
+                     <div class="col-md-9 ">
+                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
+                     </div>
+                  <!--   <div class="package-extra-info col-md-9 col-md-offset-3 col-xs-12">
+                         <span><i class="fa fa-star"></i> 102951</span>
+                     </div>-->
+                 </div>
+             </a>
+
+             <a href="/bootstrap/" class="package list-group-item">
+                 <div class="row">
+                     <div class="col-md-3">
+                         <h4 class="package-name">jquery</h4>
+                     </div>
+                     <div class="col-md-9 ">
+                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
+                     </div>
+                 </div>
+             </a>
+             <a href="/bootstrap/" class="package list-group-item">
+                 <div class="row">
+                     <div class="col-md-3">
+                         <h4 class="package-name">javascript</h4>
+                     </div>
+                     <div class="col-md-9 ">
+                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
+                     </div>
+                 </div>
+             </a>
+             <a href="/bootstrap/" class="package list-group-item">
+                 <div class="row">
+                     <div class="col-md-3">
+                         <h4 class="package-name">div+css</h4>
+                     </div>
+                     <div class="col-md-9 ">
+                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
+                     </div>
+                 </div>
+             </a>
+
+         </div>
+      </div>
+
+
+
+
+
+
+      <script src="assets/lib/jquery-1.9.1.js"></script>
+   <script>
+       $(function(){
+
+
+       })
+   </script>
 </body>
 </html>
