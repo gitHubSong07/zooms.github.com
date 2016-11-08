@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>WEB前端</title>
+    <link rel="icon" href="assets/img/icon/favicon.ico">
     <meta name="keywords" content="your keywords">
     <meta name="description" content="your description">
     <meta name="author" content="author,email address">
@@ -37,15 +38,15 @@
           <div class="container">
               <form class="form-inline ">
                   <label>选择文章分类：</label><div class="btn-group" data-toggle="buttons"><label class="btn btn-default">
-                  <input type="radio" name="options" id="relative" checked="">html/css</label><label class="btn btn-default active">
-                  <input type="radio" name="options" id="http">Jquery</label><label class="btn btn-default">
-                  <input type="radio" name="options" id="https"> Javascript </label></div>
+                  <input type="radio" name="options"  data-categories="0">html/css</label><label class="btn btn-default ">
+                  <input type="radio" name="options"  data-categories="1">Jquery</label><label class="btn btn-default">
+                  <input type="radio" name="options"  data-categories="2">Javascript </label></div>
               </form>
           </div>
       </div>
       <div class="col-xs-12">
-         <div id="article" class="container ">
-             <a href="/bootstrap/" class="package list-group-item">
+         <div id="article" class="container">
+       <!--      <a href="/bootstrap/" class="package list-group-item">
                  <div class="row">
                      <div class="col-md-3">
                          <h4 class="package-name">bootstrap</h4>
@@ -53,42 +54,11 @@
                      <div class="col-md-9 ">
                          <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
                      </div>
-                  <!--   <div class="package-extra-info col-md-9 col-md-offset-3 col-xs-12">
+                  &lt;!&ndash;   <div class="package-extra-info col-md-9 col-md-offset-3 col-xs-12">
                          <span><i class="fa fa-star"></i> 102951</span>
-                     </div>-->
+                     </div>&ndash;&gt;
                  </div>
-             </a>
-
-             <a href="/bootstrap/" class="package list-group-item">
-                 <div class="row">
-                     <div class="col-md-3">
-                         <h4 class="package-name">jquery</h4>
-                     </div>
-                     <div class="col-md-9 ">
-                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
-                     </div>
-                 </div>
-             </a>
-             <a href="/bootstrap/" class="package list-group-item">
-                 <div class="row">
-                     <div class="col-md-3">
-                         <h4 class="package-name">javascript</h4>
-                     </div>
-                     <div class="col-md-9 ">
-                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
-                     </div>
-                 </div>
-             </a>
-             <a href="/bootstrap/" class="package list-group-item">
-                 <div class="row">
-                     <div class="col-md-3">
-                         <h4 class="package-name">div+css</h4>
-                     </div>
-                     <div class="col-md-9 ">
-                         <p class="package-description">The most popular front-end framework for developing responsive, mobile first projects on the web.</p>
-                     </div>
-                 </div>
-             </a>
+             </a>-->
 
          </div>
       </div>
@@ -99,8 +69,40 @@
 
 
       <script src="assets/lib/jquery-1.9.1.js"></script>
+      <script src="assets/js/config.js"></script>
    <script>
-  
+   $(function() {
+
+//分类切换
+     var $radio = $('.form-inline').find('input[name="options"]');
+     $radio.on('change',function(i,t){
+         console.log('===:'+  $(this).attr('data-categories'));
+         $(this).text();
+         var $parentLabel = $(this).parent('label');
+         $parentLabel.addClass('active');
+         $parentLabel.siblings('label').removeClass('active');
+
+     })
+//分类切换
+
+           console.log('ITEM:' + JSON.stringify($data$.articles));
+           var htmlStr="";
+           var articles =  $data$.articles;
+           for (item in articles) {
+
+                 htmlStr += '<a href="'+articles[item].href+'" class="package list-group-item">'
+                 +'<div class="row">'
+                     +'<div class="col-md-3">'
+                         +'<h4 class="package-name">'+articles[item].title+'</h4>'
+                     +'</div>'
+                     +'<div class="col-md-9 ">'
+                         +'<p class="package-description">'+articles[item].description+'</p>'
+                     +'</div>'
+                 +'</div>'
+             +'</a>';
+           }
+           console.log('html:'+ htmlStr);
+           $('#article').html(htmlStr);
    </script>
 </body>
 </html>
